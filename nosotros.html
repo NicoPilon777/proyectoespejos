@@ -10,37 +10,41 @@
               <script>
               new WOW().init();
               </script>
+              <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">          
 
 </head>
 <body>
     <div class="contenedorindex">
 	<header id="header">
 	<!-- inicia nav -->
-		<nav>
-            <div>
-			<a href="index.html">
-			    <img src="img/logo.png" alt="logo de Aynalar Espejos">
-			</a>
-            </div>
-            <div class="navflex">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="nosotros.html">Nosotros</a></li>
-				<li><a href="galeria.html">Galería</a></li>
-				<li><a href="modelos.html">Modelos</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-
-			</ul>
-            </div>
-		</nav>
-	<!-- cierra nav -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="logo de Aynalar Espejos" class="w-100">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto pe-2 fs-2 position-sticky">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link active" href="nosotros.html">Nosotros</a>
+        <a class="nav-link active" href="galeria.html">Galería</a>
+        <a class="nav-link active" href="modelos.html">Modelos</a>
+        <a class="nav-link active" href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <!-- cierra nav -->
 	</header>
     <!-- inicia contenido principal -->
 
     <main id="main">
         <section>
         <div>
-            <h1 class="text-center"><strong>Sobre Nosotros...</strong></h1>
+            <h1 class="text-center fs-1"><strong>Sobre Nosotros...</strong></h1>
             
             <p class="text-center">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Odio beatae aliquid ullam, facilis assumenda dignissimos non vitae vero repellat, eveniet dolor recusandae perferendis maiores! Sed ullam, ipsam consectetur dicta maxime. Lorem, ipsum dolor, amet consectetur adipisicing elit. Quidem expedita nisi a maxime ducimus veniam deleniti. Sapiente odio exercitationem voluptate possimus animi aliquid aut doloremque, fugiat iste nam, eum, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore nobis quidem quis, minima similique, pariatur a dolor omnis accusamus, optio ducimus, possimus facere dolores! Rem deleniti expedita debitis corrupti!.</p>
         </div>
@@ -65,5 +69,6 @@
         </div>
     </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </body>
 </html>
