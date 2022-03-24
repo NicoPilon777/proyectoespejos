@@ -16,14 +16,14 @@ html {
 h1{
 	color: black;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 60px;
+	font-size: 4rem;
 	animation-name: textoap;
 	animation-duration: 6s; 
 }
 h3{
     color: black;
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
     padding: 5px;
     margin: 5px;
     animation-name: textoap;
@@ -32,7 +32,7 @@ h3{
 }
 
 body{
-	background-image: url(../img/imgfondo.jpg);
+	background-image: url(../img/imgfondo1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -87,7 +87,7 @@ header nav{
      }
 
 footer{
-	background-color: rgba(241,217, 238, 0.5);
+	background-color: rgba(241,217, 238, 1.5);
 }
 
 .img-inblock{
@@ -113,9 +113,17 @@ footer{
 	font-size: 2.5rem;
 	font-family: 'Open Sans', sans-serif;
 	padding: 1px 200px 10px 200px;
+	text-align: center;
+	border-style: groove;
 }
 
 .text-center{
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 10px;
+	font-size: 5rem;
+}
+.text-centercont{
 	text-align: center;
 	margin: 10px auto;
 	padding: 5px 10px;
@@ -127,6 +135,7 @@ footer{
 
 .text-left{
 	text-align: left;
+	font-size: 3rem;
 }
 
 .text-italic{
@@ -232,9 +241,8 @@ footer{
 	margin-top: 0px;
 }
 
-.navlogo{
-    height: 80%;
-	width: 20%;
+#navcolor{
+	background-color: rgba(241,217, 238, 1.0);
 }
 
 .paddingtext{
