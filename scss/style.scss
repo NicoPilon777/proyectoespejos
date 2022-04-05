@@ -1,5 +1,301 @@
 //imports
 @import "_commons";
 @import "_fonts";
-@import "_content";
-@import "_footer";
+	
+@mixin flexmix ($display, $flexd, $justify, $align){
+display: $display;
+flex-direction: $flexd;
+justify-content: $justify;
+align-items: $align;
+}	
+
+*{
+	font-family: $fontMain;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+
+html {
+	font-size: 62.5%;
+}
+
+h1{
+	color: black;
+	font-family: $fontMain;
+	font-size: $textoLg;
+	animation-name: textoap;
+	animation-duration: 6s; 
+}
+h3{
+    color: black;
+    font-family: $fontMain;
+    font-size: $textoSm;
+    padding: 5px;
+    margin: 5px;
+    animation-name: textoap;
+	animation-duration: 10s; 
+    
+}
+
+body{
+	background-image: url(../img/imgfondo1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+p{
+	color: black;
+	font-weight: 500;
+	font-size: $textoMd;
+	line-height: $textoXl;
+	font-family: $fontMain;
+	width: 80%;
+	height: 50%;
+	margin: 20px auto;
+	padding: 15px auto;
+	box-sizing: border-box;
+
+}
+
+header nav{
+	background-color: rgba(241,217, 238, 1.0);
+	position: sticky;
+	top: 0;
+	padding: 10px auto;
+	width: 100%;
+	animation-name: textoap;
+	animation-duration: 1s; 
+}
+     header nav ul{
+     	display: flex;
+     	justify-content: flex-end;
+}
+     header nav ul li{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin-top: -65px;
+}
+     header nav ul li:hover{
+     	color: black;
+     	font-weight: 900;
+     }
+
+     header nav ul li a{
+     	color: rgb(23, 0, 12);
+     	text-decoration: none;
+     	font-size: $textoMd;
+     	font-family: $fontMain;
+
+     }
+
+footer{
+	background-color: $navColor;
+	justify-content: space-between;
+	font-size: $textoMd;
+}
+
+.text-center{
+	font-size: $textoLg
+}
+
+@keyframes textoap{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.paddingtext{
+    text-align: center;
+    padding-left: 40px;
+}
+.img-inline{
+	max-width: 400px;
+	max-height: 400px;
+	padding: 10px;
+
+}	
+
+.img-ajuste{
+	overflow-x: none;
+	width: 90%;
+	height: 1000px;
+	padding-left: 10%;
+	padding-bottom: 5%
+}     
+
+.form-ajuste{
+	font-size: 2.5rem;
+	font-family: $fontMain;
+	padding: 1px 200px 10px 200px;
+	text-align: center;
+	border-style: groove;
+}
+
+.text-center{
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 10px;
+	font-size: $textoXl;
+}
+.text-centercont{
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 10px;
+}
+
+.text-right{
+	padding-right: 10px;
+}    
+
+.text-left{
+	text-align: left;
+	font-size: 3rem;
+}
+
+.w-100{
+	width: 100%;
+	height: auto;
+}
+
+.pie{
+   padding-left: 15px;
+}
+
+.pie__icono--sm{
+   width: 40px;
+}
+
+.pie__titulo--md{
+	display: inline-block;
+}
+
+.conteinermap{
+	padding-right: 50px;
+	padding-left: 50px;
+	width: auto;
+	height: auto;
+}
+
+.contenedorindex{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto ;
+	grid-template-areas: "header header" "main main" "footer footer"
+}
+
+#header{
+    grid-area: header;
+}
+#main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+
+.sectionflex{
+	@include flexmix(flex, row, space-around, center);
+	padding-right: 50px
+}
+
+.footerflex{
+	@include flexmix(flex, row, space-around, center);
+	padding-right: 15px;
+}
+
+.contenedorgaleria{
+	@extend .contenedorindex;
+	grid-template-rows: auto auto;
+	
+}
+
+.sectionflex2{
+	@include flexmix(flex, row, space-around, center);
+	flex-wrap: wrap;
+}
+
+.sectionflex3{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 30px;
+	padding-right: 40px;
+}
+
+.contenedorbody{
+	@extend .contenedorindex;
+	grid-template-columns: 2fr;
+	grid-template-rows: auto auto;
+}
+
+.navflex{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+	height: center;
+	vertical-align: middle;
+	margin-top: 0px;
+}
+
+#navcolor{
+	background-color: $navColor;
+}
+
+.paddingtext{
+    text-align: center;
+    padding-left: 40px;
+}
+
+@media screen and (max-width: 750px) {
+ 	.sectionflex{			
+	@include flexmix(flex, row, space-around, center);
+	flex-wrap: wrap;
+    }
+    
+    .sectionflex3{
+    @include flexmix(flex, row, space-around, center);
+	flex-wrap: wrap;
+}
+    .contenedorbody{
+    display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	grid-template-areas: "header" "main" "footer"
+    }
+
+    .contenedorgaleria{
+    display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto ;
+	grid-template-areas: "header" "main" "footer"	
+    }
+    .navflex{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+	height: center;
+	vertical-align: middle;
+	margin-top: 0px;
+	flex-wrap: wrap;
+    }
+}
+
+@keyframes textoap{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.transimg{
+	transform: translate(20px);
+	cursor: pointer;
+}
+
+.transimg2{
+	animation-name: textoap;
+	animation-duration: 5s;
+}

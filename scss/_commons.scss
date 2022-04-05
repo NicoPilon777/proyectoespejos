@@ -1,3 +1,24 @@
 //variables
-$imgfondo: url(../img/imgfondo1.jpg);
-$navcolor: rgba(241,217, 238, 0.5);
+$imgFondo: url(../img/imgfondo1.jpg);
+$navColor: rgba(241,217, 238, 1.0);
+$imgXl: w-100;
+$imgLg: w-75;
+$imgMd: w-50;
+$imgSm: w-25;
+
+$colores: (
+    'blue':    #0d6efd,
+    'indigo':  #6610f2,
+    'purple':  #6f42c1,
+    'pink':    #d63384,
+    'red':     #dc3545,
+    'orange':  #fd7e14,
+    'yellow':  #ffc107,
+    'green':   #198754,
+    'teal':    #20c997,
+    'cyan':    #0dcaf0,
+);
+
+.btn-group{
+	background-color: map-get($map:$colores,$key:'indigo')
+}
